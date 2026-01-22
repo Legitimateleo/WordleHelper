@@ -87,7 +87,7 @@ void WordleHelper::correct(const vector<pair<char, int>>& clues) {
         if (match) filtered.push_back(w);
     }
 
-    words = move(filtered);
+    words = std::move(filtered);
     printStatus();
 }
 
@@ -106,7 +106,7 @@ void WordleHelper::exclude(const vector<char>& letters) {
         if (!containsExcluded) filtered.push_back(w);
     }
 
-    words = move(filtered);
+    words = std::move(filtered);
     printStatus();
 }
 
@@ -150,7 +150,7 @@ void WordleHelper::wrongSpot(const vector<pair<char, int>>& clues) {
         if (valid) filtered.push_back(w);
     }
 
-    words = move(filtered);
+    words = std::move(filtered);
     printStatus();
 }
 
@@ -218,3 +218,4 @@ int main() {
 
     return 0;
 }
+
